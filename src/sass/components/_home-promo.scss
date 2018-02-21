@@ -1,0 +1,93 @@
+.promo-section {
+  background-image: url(../images/pl-hero.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  height: 500px;
+  .promo-content {
+    padding-top: 154px;
+    @include breakpoint(mobile){
+      padding-top: 104px;
+    }
+  }
+  h1 {
+    font-weight: 300;
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height:1;
+    @include breakpoint(mobile){
+      margin-bottom: 25px;
+    }
+  }
+  h3 {
+    font-weight: 300;
+    font-size: 17px;
+    opacity: 0.7;
+    margin-bottom: 45px;
+    margin-top: 0;
+    line-height: 1;
+    @include breakpoint(mobile){
+      margin-bottom: 58px;
+    }
+  }
+}
+
+.form-wrapper{
+  form {
+    width: 600px;
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+    input {
+      width: 100%;
+      line-height: 60px;
+      height: 60px;
+      border-radius: 3px;
+      background-color: #fff;
+      color: $text-color;
+      font-size: 18px;
+      padding: 0 20px;
+      box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.05);
+      @include breakpoint(phablet){
+        line-height: 56px;
+        height: 56px;
+        font-size: 14px;
+      }
+    }
+    button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      background-color: transparent;
+      width: 60px;
+      height: 100%;
+      border-bottom-right-radius: 3px;
+      border-top-right-radius: 3px;
+      transition: 0.3s all ease;
+      img {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        &.img-hover {
+          opacity: 0;
+          transition: 0.3s all ease;
+        }
+      }
+      &:hover,
+      &:focus {
+        background-color: $blush;
+        img {
+          &.img-hover {
+            opacity: 1;
+          }
+        }
+      }
+    }
+    @include breakpoint(phablet){
+      width: 307px;
+    }
+  }
+}

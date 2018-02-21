@@ -1,0 +1,324 @@
+.flower {
+  .flower-header {
+    height: 350px;
+    background-image: url(../images/pl-hero-detail.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    .row {
+      position: relative;
+    }
+    .count {
+      background-color: rgba(0, 0, 0, 0.2);
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: $blush;
+      }
+      @include breakpoint(mobile) {
+        padding: 9px 15px;
+        font-size: 12px;
+        margin-bottom: 0;
+      }
+    }
+    .star-icon {
+      @include breakpoint(mobile) {
+        width: 30px;
+        height: 30px;
+        top: 0;
+        right: 0;
+      }
+    }
+    .flower-img {
+      position: relative;
+      top: 50px;
+      border-radius: 3px;
+      @include breakpoint(phablet) {
+        top: 0;
+        margin-right: -10px;
+        margin-left: -10px;
+        height: 350px;
+        overflow: hidden;
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          background: linear-gradient(to bottom, rgba(255, 255, 255, 0.1), rgba(0, 0, 0, 0.7));
+        }
+      }
+      @include breakpoint(mobile) {
+        margin-right: -16px;
+        margin-left: -16px;
+      }
+    }
+    .header-position {
+      position: absolute;
+      bottom: 50px;
+      right: 0;
+      @include breakpoint(tablet){
+        bottom: 30px;
+      }
+      @include breakpoint(phablet) {
+        bottom: -25px;
+      }
+    }
+    .header-data {
+      color: $white;
+      position: relative;
+      padding-left: 40px;
+      h1 {
+        font-size: 35px;
+        font-weight: 300;
+        margin-bottom: 10px;
+      }
+      h3 {
+        font-size: 14px;
+        font-weight: 300;
+        opacity: 0.7;
+        margin: 0;
+      }
+      .flowrspot-btn {
+        position: absolute;
+        bottom: 0;
+        right: 10px;
+        @include breakpoint(tablet){
+          position: relative;
+          margin-top: 10px;
+          right: 0;
+        }
+        @include breakpoint(phablet) {
+          margin-top: 40px;
+        }
+      }
+      @include breakpoint(phablet) {
+        padding: 0 24px;
+      }
+    }
+    .details {
+      overflow: auto;
+      button {
+        display: block;
+        margin-right: 10px;
+        float: left;
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+    }
+    @include breakpoint(laptop){
+      height: auto;
+    }
+    @include breakpoint(phablet){
+      background-image: none;
+    }
+  }
+  .flower-description {
+    padding-top: 50px;
+    .desc-details {
+      padding-top: 50px;
+      font-size: 13px;
+      font-weight: bold;
+      line-height: 1.92;
+      text-align: justify;
+      color: $text-color;
+      p {
+        margin: 0;
+      }
+      @include breakpoint(phablet) {
+        padding-top: 84px;
+        padding-bottom: 34px;
+      }
+    }
+    .desc-text {
+      font-size: 13px;
+      line-height: 1.54;
+      font-weight: normal;
+      font-style: normal;
+      text-align: justify;
+      color: $text-color;
+      padding-left: 40px;
+      padding-bottom: 30px;
+      @include breakpoint(phablet) {
+        padding-left: 0;
+      }
+      p {
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    .container {
+      position: relative;
+      &:after {
+        content: '';
+        height: 1px;
+        background-color: #e8e9ed;
+        position: absolute;
+        bottom: 0;
+        left: 10px;
+        right: 10px;
+        display: block;
+        @include breakpoint(phablet) {
+          display: table;
+        }
+      }
+    }
+    @include breakpoint(phablet) {
+      padding: 0 24px;
+    }
+  }
+  p {
+    margin-top: 0;
+  }
+}
+
+.flowrspot-btn {
+  background: $blush;
+  background: linear-gradient(to left, $beige, $blush);
+  border-radius: 3px;
+  box-shadow: 0 15px 20px 0 rgba(234, 168, 159, 0.2);
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1;
+  padding: 18px 30px;
+  -webkit-transition: .3s all ease;
+  transition: .3s all ease;
+  &:hover,
+  &:focus,
+  &:active {
+    background: $blush-darker;
+    background: linear-gradient(to left, $beige-darker, $blush-darker);
+  }
+}
+
+.flower-detail {
+  .flowers-section {
+    padding-top: 50px;
+    padding-bottom: 40px;
+    @include breakpoint(phablet) {
+      padding-top: 10px;
+    }
+  }
+}
+
+.flower-block {
+  &.flower-extended {
+    box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.05);
+    color: $text-color;
+    cursor: auto;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      .flower-img {
+        img {
+          -webkit-transform: none;
+          transform: none;
+        }
+      }
+    }
+    .flower-img {
+      max-height: 280px;
+      overflow: hidden;
+      display: block;
+      &:hover,
+      &:focus,
+      &:active {
+        img {
+          -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+        }
+      }
+    }
+    &:after {
+      display: none;
+    }
+    .location {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      color: #df9186;
+      background-color: $white;
+      border-radius: 20px;
+      box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.05);
+      padding: 6.5px 12px 6.5px 30px;
+      font-size: 12px;
+      line-height: 1;
+      span.icon {
+        position: absolute;
+        top: 5px;
+        left: 10px;
+      }
+    }
+    .extended-content {
+      padding: 20px;
+      text-align: left;
+      .user {
+        overflow: auto;
+        margin-bottom: 20px;
+      }
+      .user-img {
+        float: left;
+        margin-right: 15px;
+      }
+      h4 {
+        font-size: 15px;
+        font-weight: normal;
+        color: #334144;
+        margin: 0;
+        a {
+          color: inherit;
+          &:hover,
+          &:focus,
+          &:active {
+            color: #df9186;
+          }
+        }
+      }
+      .author {
+        font-size: 12px;
+        font-style: italic;
+        font-weight: normal;
+        color: $text-color;
+      }
+      .short-desc {
+        font-size: 13px;
+        font-weight: normal;
+        line-height: 1.15;
+        text-align: justify;
+        color: $text-color;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #e8e9ed;
+      }
+      .counts-details {
+        padding-top: 20px;
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 1;
+        text-align: justify;
+        color: $text-color;
+        span.icon {
+          padding-right: 10px;
+        }
+      }
+    }
+  }
+}
+
+
+
+.user-img {
+  display: block;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

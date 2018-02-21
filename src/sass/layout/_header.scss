@@ -1,0 +1,170 @@
+.header {
+  box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.05);
+}
+
+.logo {
+  position: relative;
+  @include breakpoint(mobile){
+    padding-left: 4px;
+  }
+  a {
+    display: block;
+    padding: 28px 0 25px;
+  }
+}
+
+.main-navigation {
+  padding: 20px 0;
+  >ul {
+    text-align: right;
+    >li {
+      display: inline-block;
+      a {
+        display: block;
+        font-size: 14px;
+        font-size: 1em;
+        font-weight: 500;
+        line-height: 1;
+        padding: 13px 30px 13px;
+        color: $text-color;
+        position: relative;
+        -webkit-transition: .3s all ease;
+        transition: .3s all ease;
+        &:after {
+          content: '';
+          display: block;
+          width: 1px;
+          height: 20px;
+          background-color: #e8e9ed;
+          position: absolute;
+          right: 0;
+          top: 10px;
+        }
+        &:hover,
+        &:focus,
+        &:active,
+        &.featured-nav{
+          color: #df9186;
+        }
+        &.featured-nav{
+          &:after {
+            display: none;
+          }
+        }
+        &.btn-nav {
+          padding: 13px 27.22px;
+          color: #ffffff;
+          border-radius: 50px;
+          background: $blush;
+          background: linear-gradient(to left, $beige, $blush);
+          box-shadow: 0 15px 20px 0 rgba(234, 168, 159, 0.2);
+          &:hover,
+          &:focus,
+          &:active {
+            background: $blush-darker;
+            background: linear-gradient(to left, $beige-darker, $blush-darker);
+          }
+        }
+      }
+      &:last-child {
+        a:after {
+          display: none;
+        }
+      }
+      &.user {
+        a {
+          padding-right: 60px;
+        }
+        .user-img {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+    }
+  }
+}
+
+.btn-burger {
+  text-align: right;
+  @include breakpoint(phablet){
+    padding-right: 18px;
+  }
+  button {
+    background: transparent;
+    padding-top: 35px;
+    span {
+      display: block;
+      width: 24px;
+      height: 1px;
+      background-color: $text-color;
+      margin-bottom: 6px;
+    }
+    &.displayed {
+      width: 24px;
+      height: 24px;
+      box-sizing: content-box;
+      padding-top: 30px;
+      span {
+        display: none;
+      }
+      &:after,
+      &:before{
+        content: '';
+        height: 24px;
+        border-left: 1px solid $text-color;
+        position: absolute;
+        top: 30px;
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+      &:before {
+        -webkit-transform: rotate(-45deg);
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
+
+.overlay {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  z-index: 2;
+  top: 80px;
+  left: 0;
+  background-color: $white;
+  overflow-y: hidden;
+  transition: 0.5s;
+  &.overlay-shown {
+    height: 100%;
+  }
+  .main-navigation {
+    padding: 70px 0 0 0;
+    >ul {
+      text-align: left;
+      > li {
+        display: block;
+        &:last-child {
+          display: inline-block;
+        }
+        >a {
+          padding: 30px 0 30px 0;
+          &:after {
+            display: none;
+          }
+          @include breakpoint(phablet){
+            padding-left: 30px;
+          }
+          &.btn-nav {
+            padding: 13px 27.22px;
+            margin-top: 20px;
+            @include breakpoint(phablet){
+              margin-left: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
