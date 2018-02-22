@@ -17,9 +17,11 @@ n.cssHooks[b]=Ua(l.pixelPosition,function(a,c){return c?(c=Sa(a,b),Oa.test(c)?n(
   $(document).ready(function () {
 
       $('.btn-burger button').click(function () {
+      	
           $(this).toggleClass('displayed');
           $('#mobile-nav').toggleClass('overlay-shown');
           $('body').toggleClass('no-scroll');
+
       });
   });
 

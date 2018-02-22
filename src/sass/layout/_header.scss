@@ -137,10 +137,14 @@
   overflow-y: hidden;
   transition: 0.5s;
   &.overlay-shown {
-    height: 100%;
+    height: calc(100% - 80px);
+  }
+  > .container {
+    max-height: 100%;
+    overflow-y: auto;
   }
   .main-navigation {
-    padding: 70px 0 0 0;
+    padding: 70px 0;
     >ul {
       text-align: left;
       > li {

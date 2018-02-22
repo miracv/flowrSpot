@@ -8,9 +8,11 @@
   $(document).ready(function () {
 
       $('.btn-burger button').click(function () {
+      	
           $(this).toggleClass('displayed');
           $('#mobile-nav').toggleClass('overlay-shown');
           $('body').toggleClass('no-scroll');
+
       });
   });
 
