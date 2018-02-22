@@ -4,7 +4,7 @@ Project contains working HTML version of a product called FlowrSpot. It is used 
 
 Implemented pages:
 - Home (​mobile responsive​)
-- Flower list
+- Flower list (​mobile responsive​)
 - Flower details (​mobile responsive​)
 
 For generation of production ready files, open command line in project folder and run following commands:

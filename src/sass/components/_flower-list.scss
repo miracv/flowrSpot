@@ -2,9 +2,15 @@
   .search-section {
     .form-wrapper {
       padding-top: 50px;
+      @include breakpoint(mobile){
+      	padding-top: 45px;
+      }
     }
   }
   .flowers-section {
     padding-top: 50px;
+    @include breakpoint(mobile){
+      padding-top: 45px;
+    }
   }
 }
